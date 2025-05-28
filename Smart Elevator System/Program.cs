@@ -37,5 +37,16 @@ public class Program
         button2.PressButton(5, Direction.Down);   // Elevator should move to 5
 
         Console.WriteLine("\n=== All Tests Complete ===");
+
+        var system1 = new ElevatorSystem(2);
+
+        var button = new RequestButton();
+        button.RegisterObserver(system1);
+
+        button.PressButton(3, Direction.Up);
+        button.PressButton(2, Direction.Down);
+        button.PressButton(5, Direction.Up);
+
+        Console.ReadLine();
     }
 }
