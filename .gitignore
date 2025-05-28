@@ -1,0 +1,51 @@
+## Ignore Visual Studio temporary files, build results, and user files
+
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+*.log
+
+# Rider / ReSharper
+.idea/
+*.sln.iml
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vscode/
+
+# VS Code settings
+.vscode/
+
+# Visual Studio Code Coverage Results
+*.coverage
+*.coveragexml
+
+# Visual Studio working folder
+.vs/
+
+# Build/Pub folder for dotnet publish
+publish/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Dotnet tools restore folder
+.dotnet/
+
+# Test results
+TestResults/
+*.trx
+*.vsmdi
+
+# NuGet packages
+*.nupkg
+*.snupkg
+**/packages/*
+!**/packages/build/
+!**/packages/repositories.config
+
+# MSTe
