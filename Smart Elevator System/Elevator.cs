@@ -57,6 +57,12 @@
         private void MoveToFloor(int floor)
         {
             IsMoving = true;
+
+            if (floor > CurrentFloor)
+                CurrentDirection = Direction.Up;
+            else if (floor < CurrentFloor)
+                CurrentDirection = Direction.Down;
+
             Console.WriteLine($"[Elevator {Id}] Moving from {CurrentFloor} to {floor}");
             Thread.Sleep(Math.Abs(CurrentFloor - floor) * 500);
             CurrentFloor = floor;

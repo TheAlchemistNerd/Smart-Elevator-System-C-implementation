@@ -4,6 +4,8 @@ public class Program
 {
     public static void Main()
     {
+
+        #region
         Console.WriteLine("\n=== Test 1: FloorRequest ===");
         var request = new FloorRequest(5, Direction.Up);
         Console.WriteLine(request);   // Expected: Request to floor 5 (Up)
@@ -37,6 +39,7 @@ public class Program
         button2.PressButton(5, Direction.Down);   // Elevator should move to 5
 
         Console.WriteLine("\n=== All Tests Complete ===");
+        #endregion
 
         var system1 = new ElevatorSystem(2);
 
@@ -44,8 +47,13 @@ public class Program
         button.RegisterObserver(system1);
 
         button.PressButton(3, Direction.Up);
+        Thread.Sleep(500);
+
         button.PressButton(2, Direction.Down);
+        Thread.Sleep(500);
+
         button.PressButton(5, Direction.Up);
+        Thread.Sleep(500);
 
         Console.ReadLine();
     }
